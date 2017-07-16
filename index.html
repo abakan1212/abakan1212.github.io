@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -39,7 +39,7 @@
           <h1>Планета юристов</h1>
           <h2>Коллегия адвокатов и юристов в Москве и Московской области.</h2>
           <h2>+7(985)-338-42-26</h2>
-          <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Оставить заявку</button>
+          <button class=" " data-toggle="modal" data-target="#myModal">Оставить заявку</button>
         <div id="myModal" class="modal fade" tabindex="-1">
           <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -118,7 +118,7 @@
 <article class="content">
 
   </div>
-  
+
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -261,6 +261,27 @@
   	<script src="js/common.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+  $(document).ready (function () {
+    $("#done").click (function () {
+      var name= $("#name").val ();
+      var email= $("#email").val ();
+      $.ajax ({
+        url:'/ajax/feedback.php',
+        type: 'POST',
+        cache: false,
+        data:{'name': name, 'email': email},
+        datatype: 'html',
+        success: function (data) {
+          if (data=='Сообщение отправлено' {
+
+          }
+        }
+
+      })
+    })
+  })
+  </script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
